@@ -25,11 +25,11 @@ pipeline {
         stage('Docker Build & Run') {
             steps {
                 sh '''
-                  docker stop java-webapp || true
-                  docker rm java-webapp || true
+                  docker stop java-webapp2 || true
+                  docker rm java-webapp2 || true
 
-                  docker build -t java-webapp:1.0 .
-                  docker run -d -p 8081:8081 --name java-webapp java-webapp:1.0
+                  docker build -t java-webapp2:1.0 .
+                  docker run -d -p 8082:8082 --name java-webapp2 java-webapp2:1.0
                 '''
             }
         }
@@ -44,3 +44,4 @@ pipeline {
         }
     }
 }
+
