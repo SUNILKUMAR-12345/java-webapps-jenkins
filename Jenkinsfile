@@ -29,7 +29,7 @@ pipeline {
                   docker rm java-webapp2 || true
 
                   docker build -t java-webapp2:1.0 .
-                  docker run -d -p 8082:8082 --name java-webapp2 java-webapp2:1.0
+                  docker run -d -p 8080:8082 --name java-webapp2 java-webapp2:1.0
                 '''
             }
         }
@@ -44,5 +44,6 @@ pipeline {
         }
     }
 }
+
 
 
